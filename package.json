@@ -1,0 +1,35 @@
+{
+  "name": "artgallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node build/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/S00274238/Web3ArtGallery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/S00274238/Web3ArtGallery/issues"
+  },
+  "homepage": "https://github.com/S00274238/Web3ArtGallery#readme",
+  "dependencies": {
+    "build": "^0.1.4",
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  },
+  "directories": {
+    "test": "tests"
+  }
+}
