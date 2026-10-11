@@ -1,0 +1,48 @@
+
+
+@endpoint = http://localhost:3000/api/v1/arts
+
+
+
+###
+
+# @name postArt
+POST {{endpoint}} HTTP/1.1
+content-type: application/json
+# x-api-key: blahblah
+
+
+{ "test" : "papapopope",
+  "name" : "popa",
+  "genre" : "map",
+  "year" : 2000
+  }
+
+###
+
+@newArt = {{postArt.response.body._id}}
+
+
+###
+GET  {{endpoint}} HTTP/3.0
+content-type: application/json
+x-api-key: blahblah
+
+###
+GET  {{endpoint}}/{{newArt}} HTTP/3.0
+content-type: application/json
+x-api-key: blahblah
+
+
+
+###
+
+DELETE  {{endpoint}}/{{newArt}} HTTP/3.0
+content-type: application/json
+
+###
+
+PUT  {{endpoint}}/{{newArt}} HTTP/3.0
+content-type: application/json
+
+
