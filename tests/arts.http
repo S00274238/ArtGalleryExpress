@@ -4,9 +4,11 @@
 
 
 
-###
 
+
+###
 # @name postArt
+
 POST {{endpoint}} HTTP/1.1
 content-type: application/json
 # x-api-key: blahblah
@@ -15,7 +17,7 @@ content-type: application/json
 { "test" : "papapopope",
   "name" : "popa",
   "genre" : "map",
-  "year" : 1800
+  "year" : 2009
   }
 
 ###
@@ -24,6 +26,19 @@ content-type: application/json
 
 
 ###
+  /**
+ * @openapi
+ * /cars:
+ *   get:
+ *     summary: Retrieve all cars
+ *     tags:
+ *       - Cars
+ *     responses:
+ *       200:
+ *         description: Successfully retrieved arts
+ *       500:
+ *         description: Internal server error
+ */
 GET  {{endpoint}} HTTP/3.0
 content-type: application/json
 x-api-key: blahblah

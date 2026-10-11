@@ -6,23 +6,22 @@ export interface IArt {
   genre: string;
   year: number;
 }
-
 /**
  * @openapi
  * components:
  *   schemas:
- *     CreateArtInput:
+ *     CreateCarInput:
  *       type: object
  *       required:
- *         - make
- *         - model
+ *         - name
+ *         - genre
  *       properties:
- *         make:
+ *         name:
  *           type: string
- *           example: Renault
- *         model:
+ *           example: WaterInCup
+ *         genre:
  *           type: string
- *           example: Megane
+ *           example: streetArt
  *         year:
  *           type: integer
  *           example: 2010

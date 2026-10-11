@@ -114,6 +114,27 @@ export class ArtController {
   };
 
   
+/**
+* @openapi
+* /arts/{id}:
+*   put:
+*     summary: Update an art piece by ID
+*     tags:
+*       - Arts
+*     parameters:
+*       - in: path
+*         name: id
+*         required: true
+*         schema:
+*           type: string
+*     responses:
+*       200:
+*         description: Art updated
+*       404:
+*         description: Art not found
+*       500:
+*         description: Internal server error
+*/
 
   updateArt = async (req: Request, res: Response): Promise<void> => {
     try {
@@ -128,6 +149,28 @@ export class ArtController {
       res.status(500).json({ message: 'Error updating art', error });
     }
   };
+
+  /**
+* @openapi
+* /arts/{id}:
+*   delete:
+*     summary: Delete an art piece by ID
+*     tags:
+*       - Arts
+*     parameters:
+*       - in: path
+*         name: id
+*         required: true
+*         schema:
+*           type: string
+*     responses:
+*       200:
+*         description: Art deleted
+*       404:
+*         description: Art not found
+*       500:
+*         description: Internal server error
+*/
 
   deleteArt = async (_req: Request, res: Response): Promise<void> => {
     try {
