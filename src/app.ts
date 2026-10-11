@@ -33,3 +33,4 @@ app.use((req, _res, next) => {
 });
 
 
+export { app };
