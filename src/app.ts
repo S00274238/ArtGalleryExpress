@@ -2,9 +2,12 @@ import express, {Application, Request, Response} from "express" ;
 import artRoutes from "./routes/arts";
 import swaggerUi from 'swagger-ui-express';
 import { swaggerSpec } from "./config/swagger";
+import cors from 'cors';
+
 
 const app: Application = express();
 
+app.use(cors());
 app.use(express.json());
 app.use('/api/v1/arts', artRoutes);
 app.use(
@@ -12,6 +15,7 @@ app.use(
   swaggerUi.serve,
   swaggerUi.setup(swaggerSpec)
 );
+
 
 app.get("/ping", async (_req : Request, res: Response) => {
     res.json({
