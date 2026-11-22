@@ -4,7 +4,7 @@ import {describe, it, expect} from "vitest";
 const validArt = {
     "name": "popo",
     "genre": "lolo",
-    "year":  2000
+    "year":  1999
 }
 
 describe('Test Art Validation', () => {

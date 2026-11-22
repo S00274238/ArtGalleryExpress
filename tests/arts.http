@@ -14,9 +14,9 @@ content-type: application/json
 # x-api-key: blahblah
 
 { 
-  "name" : "black box in red triangle",
-  "genre" : "abstract",
-  "year" : 2016
+  "name" : "",
+  "genre" : "",
+  "year" :  
   }
 
 ###
@@ -28,13 +28,12 @@ content-type: application/json
 
 GET  {{endpoint}} HTTP/3.0
 content-type: application/json
-x-api-key: blahblah
+# x-api-key: blahblah
 
 ###
 GET  {{endpoint}}/{{newArt}} HTTP/3.0
 content-type: application/json
 x-api-key: blahblah
-
 
 
 ###
@@ -48,7 +47,7 @@ PUT  {{endpoint}}/{{newArt}} HTTP/3.0
 content-type: application/json
 
 {
-  "name" : "chudo"
+
 }
 
 
