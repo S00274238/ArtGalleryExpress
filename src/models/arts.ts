@@ -37,7 +37,7 @@ export const createArtZSchema = z.object({
   name: z.string().min(1),
   genre: z.string().min(1),
   year: z.number().min(1950).optional(),
-  imageUrl: z.string().url().optional(),
+  imageUrl: z.string().url(),
 });
 
 export const updateArtZSchema = z.object({
